@@ -5,10 +5,15 @@
   <default sync-j="4" revision="master"/>
 
   <!-- Remotes -->
-  <remote fetch="git://git.openembedded.org"    name="oe"/>
-  <remote fetch="git://git.yoctoproject.org"    name="yocto"/>
-  <remote fetch="git://github.com"              name="github"/>
-  <remote fetch="git://code.qt.io"              name="code.qt"/>
+  <remote fetch="https://github.com/openembedded"    name="oe"/>
+  <remote fetch="https://git.yoctoproject.org/git"    name="yocto"/>
+  <remote fetch="https://github.com/Pelagicore"              name="pelagicore"/>
+  <remote fetch="https://github.com/madisongh"              name="madisongh"/>
+  <remote fetch="https://github.com/sbabic"              name="sbabic"/>
+  <remote fetch="https://github.com/01org"              name="01org"/>
+  <remote fetch="https://github.com/Freescale" name="Freescale"/>
+  <remote fetch="https://github.com/GENIVI"              name="GENIVI"/>
+  <remote fetch="https://code.qt.io"              name="code.qt"/>
   <remote fetch="https://source.codeaurora.org" name="codeaurora"/>
 
   <!-- Base stuff -->
@@ -25,29 +30,29 @@
            path="sources/meta-openembedded"/>
 
   <!-- Pelagicore/Luxoft stuff -->
-  <project remote="github"
+  <project remote="pelagicore"
            upstream="master"
            revision="2f18c6e31abb06180a59856831c4a81a41e96929"
-           name="Pelagicore/meta-bistro"
+           name="meta-bistro"
            path="sources/meta-bistro"/>
 
-  <project remote="github"
+  <project remote="pelagicore"
            upstream="master"
            revision="0aef2f87ee51b62d3f65ca75852e9f6dc4bd8d8f"
-           name="Pelagicore/meta-pelux"
+           name="meta-pelux"
            path="sources/meta-pelux"/>
 
-  <project remote="github"
+  <project remote="pelagicore"
            upstream="master"
            revision="be904452ed82865494df380c0d41d312417da4a7"
-           name="Pelagicore/meta-template"
+           name="meta-template"
            path="sources/meta-template"/>
 
   <!-- 3rd-party stuff -->
-  <project remote="github"
+  <project remote="sbabic"
            upstream="thud"
            revision="bfe8133749c8bd444aab2372f1dd737eb35454c3"
-           name="sbabic/meta-swupdate"
+           name="meta-swupdate"
            path="sources/meta-swupdate"/>
 
   <project remote="yocto"
@@ -56,17 +61,17 @@
            name="meta-virtualization"
            path="sources/meta-virtualization"/>
 
-  <project remote="github"
+  <project remote="01org"
            upstream="master"
            revision="7110b507322ceb8aa1ff28c7eebf4c0be695d939"
-           name="01org/meta-security-isafw"
+           name="meta-security-isafw"
            path="sources/meta-security-isafw"/>
 
   <!-- GENIVI stuff -->
-  <project remote="github"
+  <project remote="GENIVI"
            upstream="master"
            revision="4fd8d784db63b2e93724e69a13bac917437390a7"
-           name="GENIVI/meta-ivi"
+           name="meta-ivi"
            path="sources/meta-ivi"/>
 
   <!-- Qt + Qt Automotive support stuff -->
@@ -95,16 +100,16 @@
            name="meta-raspberrypi"
            path="sources/meta-raspberrypi"/>
 
-  <project remote="github"
+  <project remote="pelagicore"
            upstream="master"
            revision="71898eb2a1c9fdeede6e53804995433f67e7b18c"
-           name="Pelagicore/meta-arp"
+           name="meta-arp"
            path="sources/meta-arp"/>
 
-  <project remote="github"
+  <project remote="Freescale"
            upstream="thud"
            revision="4a244af3993ae662624c6f615464e6806cc719a2"
-           name="Freescale/meta-freescale-distro"
+           name="meta-freescale-distro"
            path="sources/meta-freescale-distro"/>
 
   <project remote="yocto"
@@ -119,16 +124,16 @@
            name="external/imx/meta-fsl-bsp-release"
            path="sources/meta-fsl-bsp-release"/>
 
-  <project remote="github"
+  <project remote="pelagicore"
            upstream="thud"
            revision="af69de6bae01e0e20da07d8752d630e9e5c5146e"
-           name="Pelagicore/meta-smarcimx8m"
+           name="meta-smarcimx8m"
            path="sources/meta-smarcimx8m"/>
 
-  <project remote="github"
+  <project remote="madisongh"
            upstream="thud-l4t-r28.3"
            revision="a7f117529b3e93cac4f85c642783236f298bc519"
-           name="madisongh/meta-tegra"
+           name="meta-tegra"
            path="sources/meta-tegra"/>
 
 </manifest>
