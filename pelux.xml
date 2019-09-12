@@ -4,10 +4,9 @@
   <!-- Settings -->
   <default sync-j="4" revision="master"/>
 
-  <!-- Remotes -->
   <remote fetch="https://github.com/openembedded"    name="oe"/>
-  <remote fetch="https://git.yoctoproject.org/git"    name="yocto"/>
-  <remote fetch="https://github.com/Pelagicore"              name="pelagicore"/>
+  <remote fetch="https://git.yoctoproject.org/git"   name="yocto"/>
+  <remote fetch="https://github.com/Pelagicore"      name="pelagicore"/>
   <remote fetch="https://code.qt.io/qt"              name="code.qt"/>
   <remote fetch="https://source.codeaurora.org" name="codeaurora"/>
 
@@ -16,7 +15,7 @@
            upstream="thud"
            revision="e6949336479e611a142834b6d9241514cbaeaf80"
            name="poky"
-           path="poky"/>
+           path="sources/poky"/>
 
   <project remote="oe"
            upstream="thud"
@@ -28,19 +27,19 @@
   <project remote="pelagicore"
            upstream="master"
            revision="2f18c6e31abb06180a59856831c4a81a41e96929"
-           name="meta-bistro"
+           name="Pelagicore/meta-bistro"
            path="sources/meta-bistro"/>
 
   <project remote="pelagicore"
            upstream="master"
            revision="1846a61cdf461afcb99aec8abc2b3d9208156947"
-           name="meta-pelux"
+           name="Pelagicore/meta-pelux"
            path="sources/meta-pelux"/>
 
   <project remote="pelagicore"
            upstream="master"
            revision="be904452ed82865494df380c0d41d312417da4a7"
-           name="meta-template"
+           name="Pelagicore/meta-template"
            path="sources/meta-template"/>
 
   <!-- 3rd-party stuff -->
@@ -95,10 +94,10 @@
            name="meta-raspberrypi"
            path="sources/meta-raspberrypi"/>
 
-  <project remote="pelagicore"
+  <project remote="github"
            upstream="master"
            revision="71898eb2a1c9fdeede6e53804995433f67e7b18c"
-           name="meta-arp"
+           name="Pelagicore/meta-arp"
            path="sources/meta-arp"/>
 
   <project remote="github"
@@ -122,7 +121,7 @@
   <project remote="pelagicore"
            upstream="thud"
            revision="af69de6bae01e0e20da07d8752d630e9e5c5146e"
-           name="meta-smarcimx8m"
+           name="Pelagicore/meta-smarcimx8m"
            path="sources/meta-smarcimx8m"/>
 
   <project remote="github"
