@@ -6,6 +6,11 @@ LABEL description="PELUX Yocto build environment"
 ARG userid=1000
 ARG groupid=1000
 
+# Using Cntlm proxy
+# Change the IP according to your Cntlm setup
+ENV http_proxy http://127.0.0.1:3128
+ENV https_proxy http://127.0.0.1:3128
+
 USER root
 
 # Install dependencies in one command to avoid potential use of previous cache
@@ -54,17 +59,25 @@ RUN apt-get update && \
         texinfo \
         tmux \
         unzip \
+        vim \
         wget \
         xz-utils
 
 RUN apt-get clean
+
+# Install Bosch certificates
+ADD Bosch-CA-DE.crt /usr/local/share/ca-certificates/Bosch-CA-DE.crt
+ADD Bosch-CA1-DE.crt /usr/local/share/ca-certificates/Bosch-CA1-DE.crt
+ADD Bosch-CA2-DE.crt /usr/local/share/ca-certificates/Bosch-CA2-DE.crt
+RUN chmod 644 /usr/local/share/ca-certificates/*.crt && update-ca-certificates
+
 
 # For Yocto bitbake -c testimage XML reporting
 RUN pip3 install unittest-xml-reporting
 
 # For git-lfs
 # The downloaded script is needed since git-lfs is not available per default for Ubuntu 16.04
-RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && sudo apt-get install -y git-lfs
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo -E bash && sudo -E apt-get update && sudo -E apt-get install -y git-lfs
 
 # Remove all apt lists to avoid build caching
 RUN rm -rf /var/lib/apt/lists/*
