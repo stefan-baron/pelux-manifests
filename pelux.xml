@@ -4,10 +4,11 @@
   <!-- Settings -->
   <default sync-j="4" revision="master"/>
 
-  <remote fetch="https://github.com/openembedded"    name="oe"/>
-  <remote fetch="https://git.yoctoproject.org/git"   name="yocto"/>
-  <remote fetch="https://github.com/Pelagicore"      name="pelagicore"/>
-  <remote fetch="https://code.qt.io/qt"              name="code.qt"/>
+  <!-- Remotes -->
+  <remote fetch="git://git.openembedded.org"    name="oe"/>
+  <remote fetch="git://git.yoctoproject.org"    name="yocto"/>
+  <remote fetch="git://github.com"              name="github"/>
+  <remote fetch="git://code.qt.io"              name="code.qt"/>
   <remote fetch="https://source.codeaurora.org" name="codeaurora"/>
 
   <!-- Base stuff -->
@@ -24,19 +25,19 @@
            path="sources/meta-openembedded"/>
 
   <!-- Pelagicore/Luxoft stuff -->
-  <project remote="pelagicore"
+  <project remote="github"
            upstream="master"
            revision="2f18c6e31abb06180a59856831c4a81a41e96929"
            name="Pelagicore/meta-bistro"
            path="sources/meta-bistro"/>
 
-  <project remote="pelagicore"
+  <project remote="github"
            upstream="master"
-           revision="1846a61cdf461afcb99aec8abc2b3d9208156947"
+           revision="0aef2f87ee51b62d3f65ca75852e9f6dc4bd8d8f"
            name="Pelagicore/meta-pelux"
            path="sources/meta-pelux"/>
 
-  <project remote="pelagicore"
+  <project remote="github"
            upstream="master"
            revision="be904452ed82865494df380c0d41d312417da4a7"
            name="Pelagicore/meta-template"
@@ -71,20 +72,20 @@
   <!-- Qt + Qt Automotive support stuff -->
   <project remote="code.qt"
            upstream="5.13"
-           revision="refs/tags/v5.13.0"
+           revision="refs/tags/v5.13.1"
            name="yocto/meta-qt5"
            path="sources/meta-qt5"/>
 
   <project remote="code.qt"
            upstream="thud"
-           revision="e35e0affd05ddddaf3846f292f662984b9bed162"
+           revision="refs/tags/v5.13.1"
            name="yocto/meta-boot2qt"
            path="sources/meta-boot2qt"/>
 
   <!-- BSP layers -->
   <project remote="yocto"
            upstream="thud"
-           revision="278f0b5fa2f1836635178bdc770e035d77ae03c7"
+           revision="c200851435f39acd2fe4abbf7a05fbf617833964"
            name="meta-intel"
            path="sources/meta-intel"/>
 
@@ -94,7 +95,7 @@
            name="meta-raspberrypi"
            path="sources/meta-raspberrypi"/>
 
-  <project remote="pelagicore"
+  <project remote="github"
            upstream="master"
            revision="71898eb2a1c9fdeede6e53804995433f67e7b18c"
            name="Pelagicore/meta-arp"
@@ -118,15 +119,15 @@
            name="external/imx/meta-fsl-bsp-release"
            path="sources/meta-fsl-bsp-release"/>
 
-  <project remote="pelagicore"
+  <project remote="github"
            upstream="thud"
            revision="af69de6bae01e0e20da07d8752d630e9e5c5146e"
            name="Pelagicore/meta-smarcimx8m"
            path="sources/meta-smarcimx8m"/>
 
   <project remote="github"
-           upstream="thud-l4t-r32.1"
-           revision="29677fe9484eddaa351dd0a05b0a8f8fb15fe075"
+           upstream="thud-l4t-r28.3"
+           revision="a7f117529b3e93cac4f85c642783236f298bc519"
            name="madisongh/meta-tegra"
            path="sources/meta-tegra"/>
 
