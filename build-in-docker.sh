@@ -29,7 +29,7 @@ if [[ $# -eq 0 ]] ; then
     exit 1
 fi
 
-repo init -u https://github.com/Pelagicore/pelux-manifests.git -b $BRANCH;
+repo init -u https://github.com/stefan-baron/pelux-manifests.git -b $BRANCH;
 repo sync;
 
 if [ $LAYER ] ; then

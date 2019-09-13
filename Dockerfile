@@ -5,13 +5,14 @@ LABEL description="PELUX Yocto build environment"
 # Enables us to overwrite the user and group ID for the yoctouser. See below
 ARG userid=1000
 ARG groupid=1000
+ARG proxy=http://10.0.2.2:3128
+
+USER root
 
 # Using Cntlm proxy
 # Change the IP according to your Cntlm setup
-ENV http_proxy http://127.0.0.1:3128
-ENV https_proxy http://127.0.0.1:3128
-
-USER root
+ENV http_proxy ${proxy} 
+ENV https_proxy ${proxy} 
 
 # Install dependencies in one command to avoid potential use of previous cache
 # like explained here: https://stackoverflow.com/a/37727984
