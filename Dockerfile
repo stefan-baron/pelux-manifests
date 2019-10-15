@@ -17,6 +17,7 @@ ENV https_proxy ${proxy}
 # Install dependencies in one command to avoid potential use of previous cache
 # like explained here: https://stackoverflow.com/a/37727984
 RUN apt-get update && \
+    apt-get upgrade && \
     apt-get install -y \
         bc \
         build-essential \
@@ -62,7 +63,9 @@ RUN apt-get update && \
         unzip \
         vim \
         wget \
-        xz-utils
+        xz-utils \
+        libncurses5-dev \
+        libncursesw5-dev 
 
 RUN apt-get clean
 
